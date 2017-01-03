@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>掌上职业宝</title>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+    <div class="layout">
+        <div class="header">
+
+            <a href="cityList.html" >
+                <span class="tocity">广州</span>
+            </a>
+
+            <a href="task.html">
+                <span class="mytask"><i>.</i></span>
+            </a>
+
+        </div>
+        <div class="top"></div>
+        <div class="information">
+            <ul>
+                <li>
+                    <p>今日可赚（RMB）</p>
+                    <span class="todaymoney">12.00</span>
+                </li>
+                <li>
+                    <p>可做任务（个）</p>
+                    <span class="todotask">100</span>
+                </li>
+            </ul>
+        </div>
+        <div class="operate">
+            <ul>
+                <li class="fenlei">
+                    <span class="sort">分类</span>
+                </li>
+
+                <li class="paixu">
+                    <span class="rank">排序</span>
+                </li>
+            </ul>
+        </div>
+        <div class="showfenlei">
+            <ul>
+                <li class="clearfix buxian ">不限 <span class="checkf fr unlimit     "></span></li>
+                <li class="clearfix tiyan  ">体验 <span class="checkf fr experience  "></span></li>
+                <li class="clearfix hudong ">互动 <span class="checkf fr interaction "></span></li>
+                <li class="clearfix fenxian">分享 <span class="checkf fr share       "></span></li>
+                <li class="clearfix qita   ">其他 <span class="checkf fr others      "></span></li>
+            </ul>
+            <div class="feileiSubmitBtn">提交</div>
+        </div>
+        <div class="showpaixu">
+            <ul>
+                <li class="clearfix">最新发布 <span class="checkp fr"></span></li>
+                <li class="clearfix">单价最高 <span class="checkp fr"></span></li>
+                <li class="clearfix">最快审核 <span class="checkp fr"></span></li>
+            </ul>
+        </div>
+        <div class="msk"></div>
+        <div class="content">
+           <!-- <ul class="list">
+                <a href="./detail.html?page=#home">
+                    <li class="clearfix">
+                        <div class="zsb_i_img">
+                            <img src="./images/icon_1_share.png" alt=""/>
+                        </div>
+                        <div class="zsb_i_right">
+                            <div class="title">
+                                <p>速降APP新用户下载，送20元红包~</p>
+                            </div>
+                            <div class="price">
+                                <span>1.50</span>元
+                            </div>
+                            <div class="time">
+                                    <span>剩余9次</span>
+                                    <span>2小时前</span>
+                            </div>
+                        </div>
+                    </li>
+                </a>
+            </ul>-->
+        </div>
+    </div>
+    <script src="./module/js/jquery.min.js"></script>
+    <script src="./module/js/template-native.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="text/javascript">
+        function gotoFunc(segment){
+            var pageHome="";
+            var taskIdHome="";
+            var mewIdHome="";
+            var platformHome="";
+            if(segment.indexOf("?")>0){
+                var urlstr=segment.split("?")[1];
+                var arr="";
+                if(urlstr.indexOf("&")>0){
+                    arr=urlstr.split("&");
+                    pageHome=arr[0].split("=")[1];
+                    taskIdHome=arr[1].split("=")[1];
+                    platformHome=arr[2].split("=")[1];
+                    mewIdHome=arr[3].split("=")[1];
+                }else{
+                    pageHome=urlstr.split("=")[1];
+                }
+            }
+            console.log("page="+pageHome+"/taskId="+taskIdHome+"/platform="+platformHome+"/mewId="+mewIdHome);
+            $.ajax({
+//                url:"http://192.168.199.196/palmjobadmin/task/taskExist",
+				url:"http://www.timemtech.com/palmjobadmin/task/taskExist",
+                type:"post",
+                data:{taskId:taskIdHome,mewId:mewIdHome,platformType:platformHome},
+                success:function(data){
+                    if(data.result.errorCode==1){
+                        window.location.href=segment;
+                    }else{
+                        alert(data.data.msg);
+                    }
+                },
+                error:function(result){
+                    console.log(result);
+                }
+            });
+            return false;
+        }
+    </script>
+    <script type="text/template" id="homeTemplate">
+          <ul class="list">
+              <%for( var i = 0 ; i < hometaskList.length ; i++ ) { %>
+              <a href="./zsb-detail.html?page=1" onclick="gotoFunc('./zsb-detail.html?page=1&taskId=<%=hometaskList[i].id%>&platform=<%=hometaskList[i].platform%>&mewId=<%=hometaskList[i].mewId%>')">
+                  <li class="clearfix">
+                      <div class="zsb_i_img">
+                          <img src="<%=hometaskList[i].photo%>" alt=""/>
+                      </div>
+                      <div class="zsb_i_right">
+                          <div class="title">
+                              <p><%=hometaskList[i].title%></p>
+                          </div>
+                          <div class="price">
+                              <%if(((hometaskList[i].unitPrice).toString()).indexOf(".")>0) { var lastNum =((hometaskList[i].unitPrice).toString()).split(".")[1];%>
+                              <%if(lastNum.length==0){%>
+                              <span><%=hometaskList[i].unitPrice%>00</span>
+                              <%}else if(lastNum.length==1){%>
+                              <span><%=hometaskList[i].unitPrice%>0</span>
+                              <%}else{%>
+                              <span><%=hometaskList[i].unitPrice%></span>
+                              <%}%>
+                              <%}else {%>
+                              <span><%=hometaskList[i].unitPrice%>.00</span>
+                              <%}%>元
+                          </div>
+                          <div class="time">
+                              <span>剩余<%=hometaskList[i].surplusNumber%>次</span>
+                              <span><%=hometaskList[i].generalTime%></span><!--3小时前-->
+                          </div>
+                      </div>
+                  </li>
+              </a>
+              <%}%>
+          </ul>
+    </script>
+    <script type="text/javascript">
+        var createLoadMore=$('<div class="loadMore"><span class="loadMoreBtn">加载更多..</span></div>');
+        $(function(){
+            $.args();
+            $.selectFunc();
+            $.sortFunc();
+            $.rankFunc();
+            $.msk();
+            $.rendering();
+            $.requestSort();
+        });
+    </script>
+</body>
+</html>

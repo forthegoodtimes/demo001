@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>掌上职业宝</title>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/city.css"/>
+    <script type="text/javascript">
+        function gotoFunc(area){
+            localStorage.setItem('key',area);
+            window.location.href="home.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="list">
+        <div class="header">
+
+            <a href="home.html">
+                <span class="goto">广州</span>
+            </a>
+
+            <a href="home.html">
+                <span class="home"><i>.</i></span>
+            </a>
+
+        </div>
+
+        <div class="current">
+            <p>定位</p>
+            <span class="currentC">定位中..</span>
+        </div>
+
+        <div class="hot clearfix">
+            <p>热门城市</p>
+            <ul class="hot-city">
+                <li>广州</li>
+                <li>上海</li>
+                <li>北京</li>
+            </ul>
+        </div>
+
+        <div class="sort clearfix">
+            <ul class="sort-city">
+                <li>B</li>
+                <li>北京</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <ul>
+                <li class="icont"><i>.</i></li>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+                <li>F</li>
+                <li>G</li>
+                <li>H</li>
+                <li>J</li>
+                <li>K</li>
+                <li>L</li>
+                <li>M</li>
+                <li>N</li>
+                <li>P</li>
+                <li>Q</li>
+                <li>R</li>
+                <li>S</li>
+                <li>T</li>
+                <li>W</li>
+                <li>X</li>
+                <li>Y</li>
+                <li>Z</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=abcs"></script>
+<script src="./module/js/jquery.min.js"></script>
+<script src="./js/city.js"></script>
+<script type="text/javascript">
+  $(function(){
+      $.list();
+      $.toTop();
+      $.tofind();
+      $.currrent();
+  })
+</script>

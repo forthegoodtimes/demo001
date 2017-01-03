@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>掌上职业宝</title>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+    <div class="register">
+        <div class="header">
+            <p>绑定手机</p>
+        </div>
+        <div class="inp btop">
+            <label>手 机</label><input type="text" name="tel" class="tell" placeholder="请输入手机号" maxlength="11" /><span class="getCode">获取验证码</span><span class="waitCode">60s后重新获取</span>
+        </div>
+
+        <div class="inp">
+            <label>验证码</label><input type="text" name="code" class="code" placeholder="请输入验证码"/>
+        </div>
+
+        <div class="submitBtn">确认</div>
+
+    </div>
+
+
+</body>
+</html>
+<script src="./module/js/jquery.min.js"></script>
+<script src="./js/main.js"></script>
+<script>
+    $(function(){
+        $.register();
+    })
+</script>
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>掌上职业宝</title>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+<div class="task">
+    <div class="header">
+        <a href="home.html">
+            <span class="back"></span>
+        </a>
+        <p>我的任务</p>
+    </div>
+
+    <div class="status">
+        <ul class="status-list">
+
+            <li>全部<i class="redbborder"></i></li>
+
+            <li>进行中<i></i></li>
+
+            <li>审核中<i></i></li>
+
+            <li>已结束<i></i></li>
+
+        </ul>
+    </div>
+    <div class="content">
+        <ul class="list">
+            <!--进行中-->
+            <li class="clearfix ">
+                <a href="detail.html?page=2">
+                    <div class="left">
+                        <img src="./images/icon_2_experience.png" alt=""/>
+                    </div>
+                    <div class="right">
+                        <div class="r-top">
+
+                            <p class="title">
+                                闪银注册+授信+提现+【授信+提现+授信+提现现+授信+提现+授信+提现现+授信+提现+授信+提现现+授信+提现+授信+提现
+                            </p>
+
+                            <p class="price">
+                                <span class="money">50.00</span>元
+                            </p>
+                            <p class="time">
+                                <span>剩余100次</span>
+                                <span>刚刚</span>
+                            </p>
+                        </div>
+
+                        <div class="r-buttom clearfix">
+                            <div class="count fl">
+                                <span>剩余时间：</span>
+                                <span>00天01小时59分</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="continue fr">继续任务</div>
+            </li>
+
+            <!--审核中-->
+            <li class="clearfix ">
+                <a href="detail.html?page=2">
+                    <div class="left">
+                        <img src="./images/icon_1_share.png" alt=""/>
+                    </div>
+                    <div class="right">
+                        <div class="r-top">
+
+                            <p class="title">
+                                校园调查问卷，大学就读的你喜欢逃课吗，请问逃过多少次课？？
+                            </p>
+
+                            <p class="price">
+                                <span class="money">50.00</span>元
+                            </p>
+                            <p class="time">
+                                <span>剩余100次</span>
+                                <span>2016-12-28</span>
+                            </p>
+                        </div>
+
+                        <div class="r-buttom clearfix">
+                            <div class="check fl">
+                                <span>审核中：</span>
+                                <span>00分</span>后无反馈将自动结算
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </li>
+
+            <!--已结束-->
+            <li class="clearfix ">
+                <a href="detail.html?page=2">
+                    <div class="left">
+                        <img src="./images/icon_2_experience.png" alt=""/>
+                    </div>
+                    <div class="right">
+                        <div class="r-top">
+
+                            <p class="title">
+                                这是一首很好听的歌曲，你得静静静静静静听
+                            </p>
+
+                            <p class="price">
+                                <span class="money">50.00</span>元
+                            </p>
+                            <p class="time">
+                                <span>剩余100次</span>
+                                <span>2016-12-28</span>
+                            </p>
+                        </div>
+
+                        <div class="r-buttom clearfix">
+                            <div class="count fl">
+                                <span>已过期</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+</div>
+<script src="./module/js/jquery.min.js"></script>
+<script src="js/task.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $.status();
+    })
+</script>
+
+</body>
+</html>

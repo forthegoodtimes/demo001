@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>掌上职业宝</title>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./module/css/swiper.min.css"/>
+    <style>
+        .swiper-container, .swiper-slide {width: 100%;height: 89%;}
+    </style>
+</head>
+<body>
+<div class="apply">
+    <div class="header">
+        <a href="javascript:history.back()">
+            <span class="back"></span>
+        </a>
+        <p>任务步骤</p>
+    </div>
+    <div class="top"></div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="content">
+                    <div class="point ">
+                      1/4
+                    </div>
+                   <div class="main">
+                       <p class="tips">步骤说明</p>
+                       <p class="txt">
+                           1、点击链接，输入未注册过的手机号码，领取12元优惠券，然后下载滴滴使用优惠券去尝试首次快车服务。
+                       </p>
+                       <a href="#">
+                           <div class="goto">
+                                打开链接
+                            </div>
+                       </a>
+                       <p class="tips">注意</p>
+                       <p class="txt">
+                           请认真阅读任务说明，并严格按照任务要求完成任务。请注意您的流量，建议您在WIFI环境下完成下载。任务需要在2小时内完成哦，加油吧！么么哒～
+                       </p>
+                   </div>
+                </div>
+
+
+            </div>
+
+            <div class="swiper-slide">
+
+                <div class="content">
+                    <div class="point ">
+                       2/4
+                    </div>
+                    <div class="main">
+                        <p class="tips">步骤说明</p>
+                        <p class="txt">
+                            提交手机号码+注册姓名
+                        </p>
+                        <div class="inp">
+                            <textarea name="name" class="inp-tab" cols="30" rows="10" placeholder="请输内容"></textarea>
+                            <p class="inp-txt">(还可以输入<span class="inp-num">200</span>字)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+
+                <div class="content">
+                    <div class="point ">
+                       3/4
+                    </div>
+                    <div class="main">
+                        <p class="tips">步骤说明</p>
+                        <p class="txt">
+                            点击链接，输入未注册过的手机号，领取12元优惠券，然后下载滴滴使用优惠券尝试首次快车服务。
+                        </p>
+                        <p class="tips">步骤说明</p>
+
+                        <ul class="list clearfix">
+                            <li><img src="" alt=""/></li>
+                            <li><img src="" alt=""/></li>
+                            <li><img src="" alt=""/></li>
+                            <li><img src="" alt=""/></li>
+                            <li><img src="" alt=""/></li>
+                            <li><img src="" alt=""/></li>
+                            <li><img src="" alt=""/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+
+                <div class="content">
+                    <div class="point ">
+                        4/4
+                    </div>
+                    <div class="main">
+                        <p class="tips">步骤说明</p>
+                        <p class="txt">
+                            提交成功的截图
+                        </p>
+
+                        <div class="photos clearfix">
+                            <ul class="uploading ">
+                                <!--<li><img src="./images/icon_0_other.png" alt=""/></li>
+                                <li><img src="./images/icon_0_other.png" alt=""/></li>
+                                <li><img src="./images/icon_0_other.png" alt=""/></li>-->
+                            </ul>
+                            <span class="file fl">
+                                <input type="file" name="photos" class="file-tab"/>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="submit-button"> 提交任务</div>
+        <div class="swiper-pagination circle"></div>
+
+    </div>
+
+
+
+</div>
+
+<script src="module/js/jquery.min.js"></script>
+<script src="module/js/swiper.js"></script>
+<script>
+    $(function(){
+        var mySwiper = new Swiper('.swiper-container', {
+            speed:750,
+            pagination: '.swiper-pagination',
+            paginationClickable :true,
+            mode:'horizontal'
+        });
+    })
+</script>
+</body>
+</html>

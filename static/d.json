@@ -1,0 +1,37 @@
+{
+  "data":[
+    {
+      "buttonStatus":"0",
+      "buttonMsg":"立即申请",
+      "buttonStatus":"0",
+      "task":[{
+        "id":"0090",
+        "title":"时尚性感，魅力十足！",
+        "explain":"打开连接，手机号码注册授信获得额度后申请借款，即可获得现金奖励！获得信用额度后借款后借款一百元以上！一定要借款！一定要借款！一定要借款！一定要申请借款，即可获得奖励。",
+        "unitPrice":"21",
+        "platform":"0",
+        "number":"1000",
+        "applyNumber":"99",
+        "surplusNumber":"111",
+        "endTime":"13100",
+        "examineTime":"72",
+        "repeatType":"1",
+        "picList":[
+          {
+            "picture":"./images/icon_1_share.png"
+          },
+          {
+            "picture":"./images/icon_0_other.png"
+          },
+          {
+            "picture":"./images/icon_3_action.png"
+          }
+        ]
+      }]
+    }
+  ],
+  "result":[
+    {"msg":"请求成功"},
+    {"errorCode":"1"}
+  ]
+}

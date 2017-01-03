@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name = "format-detection" content="telephone = no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>掌上职业宝</title>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+    <div class="detail">
+       <div class="header">
+           <a href="javascript:;">
+                <span class="goback"><i>.</i></span>
+           </a>
+           <h1>这个是标题标题</h1>
+           <a href="javascript:;">
+               <span class="mytask"><i>.</i></span>
+           </a>
+       </div>
+        <div class="top"></div>
+
+        <div class="card">
+            <p class="title">这是个标题标题,哇哈哈哈</p>
+            <p class="price">
+                50.00元
+            </p>
+            <div class="clearfix">
+               <span class="end-time">截止时间：2016-12-28</span>
+                <span class="check-time">审核：72小时</span>
+            </div>
+            <div class="clearfix">
+                <span class="repeat">重复执行：是</span>
+                <span class="surplus">剩余：72</span>
+            </div>
+
+        </div>
+
+        <div class="tab">
+            <div class="tips">
+                任务说明
+            </div>
+            <div class="notice">
+                打开连接，手机号码注册授信获得额度后申请借款，即可获得现金奖励！获得信用额度后借款后借款一百元以上！一定要借款！一定要借款！一定要借款！一定要申请借款，即可获得奖励。
+            </div>
+        </div>
+
+        <div class="tab pb_10">
+            <div class="tips">
+                任务图示
+            </div>
+
+            <ul class="photos clearfix">
+                <li><img src="./images/icon_2_experience.png" alt=""/></li>
+                <li><img src="./images/icon_1_share.png" alt=""/></li>
+                <li><img src="./images/icon_3_action.png" alt=""/></li>
+                <li><img src="./images/icon_0_other.png" alt=""/></li>
+            </ul>
+
+
+        </div>
+        <div class="foot"></div>
+        <div class="footer">
+            <div class="fl left">
+                <div class="preview">
+                    预览
+                </div>
+            </div>
+            <div class="fr right">
+
+                <div class="play">
+                    立即申请
+                </div>
+
+                <div class="stop">
+                    已暂停
+                </div>
+
+                <div class="continue">
+                    <p>继续任务</p>
+                    <p class="countdown">00:00:59</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d_msk ">
+           <div class="d_msk_box">
+               <h3>提示</h3>
+               <p>是否确认申请该任务？</p>
+               <div class="clearfix select">
+                   <span class="d_off">取消</span>
+                   <span class="d_on">确认</span>
+               </div>
+           </div>
+        </div>
+
+    </div>
+    <script src="./module/js/jquery.min.js"></script>
+    <script src="js/d.js"></script>
+    <script type="text/javascript">
+        jq(function(){
+            jq.goBack();
+            jq.renderData();
+            jq.toNextPage();
+            jq.loops();
+        })
+    </script>
+</body>
+</html>
